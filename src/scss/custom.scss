@@ -1,0 +1,88 @@
+$navbar-max-height: 80px;
+
+.page-section {
+  padding: 6rem 0;
+}
+
+.navbar {
+  max-height: $navbar-max-height;
+  z-index: 1;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+
+  &:hover,
+  &:active {
+    color: #f4623a !important;
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    &:hover,
+    &:active {
+      color: #fff !important;
+    }
+  }
+}
+
+.hero {
+  padding: calc(10rem + $navbar-max-height) 0 10rem;
+  position: relative;
+  background: center no-repeat linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%);
+  background-size: cover;
+
+  @include media-breakpoint-up(lg) {
+    padding: 22rem 0;
+  }
+}
+
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  object-fit: cover;
+  object-position: top;
+  z-index: -2;
+}
+
+.services-swiper-container {
+  margin-top: -400px;
+
+  .services-swiper img {
+    flex: 0 0 400px;
+    max-height: 400px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .swiper-pagination-horizontal {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .swiper-pagination-dot {
+    display: inline-block;
+    width: 20px;
+    height: 4px;
+    cursor: pointer;
+    opacity: 0.25;
+    background-color: white;
+  }
+
+  .swiper-pagination-dot-active {
+    width: 30px;
+    opacity: 1;
+    background-color: white;
+  }
+}
+
+/* Available in Bootstrap 5.3 */
+.object-fit-cover {
+  object-fit: cover;
+}

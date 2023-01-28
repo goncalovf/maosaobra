@@ -1,0 +1,29 @@
+$font-family-sans-serif: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$primary-color: #f4623a;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": #6C757D,
+  "success": #198754,
+  "info": #0DCAF0,
+  "warning": #FFC107,
+  "danger": #DC3545,
+  "light": #F8F9FA,
+  "dark": #212529
+);
+
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+.btn-primary {
+  @include button-variant($primary-color, darken($primary-color, 7.5%), white);
+}
+
+.btn-light {
+  @include button-variant(white, darken(white, 7.5%), black);
+}
+
+// Import our custom CSS
+@import "./custom";
