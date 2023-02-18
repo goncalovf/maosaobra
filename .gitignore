@@ -1,2 +1,2 @@
-dist
+_site/dist/*.bundle.*
 node_modules
